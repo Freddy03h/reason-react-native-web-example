@@ -19,6 +19,7 @@ let styles =
 [@react.component]
 let make = (~serverUrl: ReasonReactRouter.url) => {
   let url = ReasonReactRouter.useUrl(~serverUrl, ());
+  Js.log(url);
   let route = Routes.match(url);
 
   <View>
