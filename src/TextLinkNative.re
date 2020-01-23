@@ -1,4 +1,4 @@
-[@bs.module "../../../src/TextLinkNative"] [@react.component]
+[@bs.module "src/TextLinkNative"] [@react.component]
 external make:
   (
     ~href: string,

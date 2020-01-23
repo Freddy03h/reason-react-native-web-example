@@ -6,6 +6,7 @@
 // 'react-native'. This will add those deps to the server bundle, but should
 // also run the babel transform on them to switch 'react-native' --> 'react-native-web'
 
+const path = require("path");
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
@@ -13,6 +14,8 @@ module.exports = {
     config.resolve.extensions = config.resolve.extensions
       .map(extension => ".web" + extension)
       .concat(config.resolve.extensions);
+
+    config.resolve.alias.src = path.resolve(__dirname, "src");
 
     if (target === "node") {
       config.externals = [

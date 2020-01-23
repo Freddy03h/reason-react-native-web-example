@@ -1,4 +1,4 @@
-[@bs.module "../../../src/TouchableHighlightLinkNative.js"] [@react.component]
+[@bs.module "src/TouchableHighlightLinkNative"] [@react.component]
 external make:
   (
     ~href: string,
